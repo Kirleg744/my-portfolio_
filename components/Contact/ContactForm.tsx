@@ -4,9 +4,13 @@ import Link from "next/link";
 import { MutableRefObject, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import toast  from "react-toastify";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { PropagateLoader } from "react-spinners";
+
 const ContactForm = () => {
     const [acceptWithRules, setAcceptWithRules] = useState(false);
+    const [loading, setLoading] = useState(false)
     const formRef = useRef() as MutableRefObject<HTMLFormElement>;
 
     const toggleAcceptWithRules = () => {
@@ -15,21 +19,33 @@ const ContactForm = () => {
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        emailjs.sendForm(
-            "service_3zjexdk",
-            "template_tsyvjrd",
-            formRef.current,
-            "nWb5i162CN2oAbmeK"
-        ).then(result => {
-            toast('Данні відправлені')
-        }, error => {
-
-        }
-
-        )
+        setLoading(true)
+        emailjs
+            .sendForm(
+                "service_3zjexdk",
+                "template_tsyvjrd",
+                formRef.current,
+                "nWb5i162CN2oAbmeK"
+            )
+            .then(
+                (result) => {
+                    toast(`Данні відправлені ${result.text}`);
+                    setLoading(false)
+                },
+                (error) => {
+                    toast.error(`Данні не відправлені ${error.text}`);
+                    setLoading(false)
+                }
+            );
+        formRef.current.reset()
     };
     return (
-        <form className={styles.contact__form} action="">
+        <form
+            onSubmit={sendEmail}
+            className={styles.contact__form}
+            ref={formRef}
+            action=""
+        >
             <ContactInput
                 text="П.І.Б"
                 placeholder="Вкажіть ваше ПІБ"
@@ -58,7 +74,7 @@ const ContactForm = () => {
                 disabled={!acceptWithRules}
                 className={styles.contact__form__btn}
             >
-                Відправити заявку
+               {loading ? <PropagateLoader color="#fff"/> : 'Відправити заявку'}
             </button>
             <label className={styles.contact__form__checkbox}>
                 <input

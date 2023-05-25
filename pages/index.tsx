@@ -7,6 +7,7 @@ import About from "@/components/About/About";
 import Skills from "@/components/Skills/Skills";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import Contact from "@/components/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
                 <Skills/>
                 <Portfolio/>
                 <Contact/>
+                <Footer/>
             </main>
             <div className="background-animation">
                 <div id="ball-one"></div>

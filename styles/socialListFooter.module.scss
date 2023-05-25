@@ -1,4 +1,6 @@
 .social__list {
+    display: flex;
+    align-items: center;
     &__item {
         font-family: "Lato";
         font-style: normal;
@@ -6,9 +8,9 @@
         font-size: 20px;
         line-height: 128.9%;
         text-decoration-line: underline;
-        color: #0caed5;
+        color: #BDBDBD;
         &:not(:last-child) {
-            margin-bottom: 17px;
+            margin-right: 40px;
         }
 
         &__link {
