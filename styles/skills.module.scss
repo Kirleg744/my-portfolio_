@@ -1,0 +1,110 @@
+.skills {
+    padding-top: 135px;
+    padding-bottom: 111px;
+
+    @media all and (max-width: 1024px) {
+        padding-top: 106px;
+    }
+
+    @media all and (max-width: 768px) {
+        padding-top: 77px;
+        padding-bottom: 83px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 32px;
+        row-gap: 100px;
+        margin-top: 107px;
+        @media all and (max-width: 1024px) {
+            margin-top: 88px;
+            column-gap: 24px;
+            row-gap: 113px;
+        }
+
+        @media all and (max-width: 768px) {
+            margin-top: 65px;
+            column-gap: 20px;
+            row-gap: 80px;
+        }
+
+        @media all and (max-width: 620px) {
+            display: block;
+        }
+    }
+
+    &__item {
+
+        &:not(:last-child){
+            margin-bottom: 23px;
+
+            @media all and (max-width: 475px) {
+                margin-bottom: 53px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 38px;
+        padding-top: 10px;
+        background-repeat: no-repeat;
+
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        color: #f2f2f2;
+
+        @media all and (max-width: 1024px) {
+            font-size: 22px;
+        }
+
+        @media all and (max-width: 768px) {
+            font-size: 18px;
+            background-position-y: -6px; 
+            margin-bottom: 26px;
+        }
+
+        &__text {
+            padding-left: 56px;
+        }
+
+        &__border{
+            max-width: 248px;
+            margin-top: 17px;
+            display: block;
+            height: 2px;
+            background: linear-gradient(89.99deg, #00D1FF 0%, rgba(255, 34, 141, 0) 100%);
+
+            @media all and (max-width: 1024px) {
+                margin-top: 8px;
+            }
+
+            @media all and (max-width: 768px) {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &__text {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 128.9%;
+        color: #bdbdbd;
+        @media all and (max-width: 1024px) {
+            font-size: 18px;
+        }
+
+        @media all and (max-width: 1024px) {
+            font-size: 16px;
+        }
+    }
+
+    &__frontend{
+        background-image: url('/img/iconFrontend.svg')
+    }
+}

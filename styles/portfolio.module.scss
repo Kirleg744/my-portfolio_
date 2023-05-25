@@ -1,0 +1,196 @@
+.portfolio {
+    &__tabs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+
+        @media all and (max-width: 1024px) {
+            margin-top: 90px;
+            margin-bottom: 48px;
+        }
+
+        @media all and (max-width: 768px) {
+            margin-top: 56px;
+            margin-bottom: 32px;
+        }
+
+        @media all and (max-width: 555px) {
+            overflow: scroll;
+            margin-top: 49px;
+            margin-bottom: 62px;
+        }
+
+        &__item {
+            white-space: nowrap;
+            &:not(:last-child) {
+                margin-right: 56px;
+            }
+
+            &:nth-child(3) {
+                margin-right: 73px;
+            }
+
+            &__btn {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                &__title {
+                    font-family: "Raleway";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 128.9%;
+
+                    @media all and (max-width: 1024px) {
+                        font-size: 22px;
+                    }
+
+                    @media all and (max-width: 769px) {
+                        font-size: 18px;
+                    }
+                }
+
+                &__text {
+                }
+
+                &__arrow {
+                    position: absolute;
+                    top: 16px;
+                    left: -20px;
+
+                    @media all and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                &__border {
+                    display: block;
+                    margin-top: 15px;
+                    height: 2px;
+                    background: linear-gradient(
+                        89.99deg,
+                        #5b5b5b 0%,
+                        rgba(91, 91, 91, 0) 100%
+                    );
+
+                    @media all and (max-width: 1024px) {
+                        margin-top: 7px;
+                    }
+
+                    @media all and (max-width: 768px) {
+                        margin-top: 5px;
+                    }
+
+                    &_active {
+                        background: linear-gradient(
+                            89.99deg,
+                            #00d1ff 0%,
+                            rgba(255, 34, 141, 0) 100%
+                        );
+                    }
+                }
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 32px;
+        row-gap: 64px;
+        margin-bottom: 50px;
+        margin-top: 56px;
+
+        &__item {
+            &__title {
+                font-family: "Lato";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 128.9%;
+                color: #f2f2f2;
+                margin-top: 32px;
+            }
+
+            &__img {
+                max-width: 100%;
+                height: 422px;
+                border-radius: 4px;
+                object-fit: contain;
+                transition: transform 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.02);
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    &__slide {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+        width: calc(100% - 24px);
+        max-height: 400px;
+
+        @media all and (max-width: 768px) {
+            width: calc(100% - 18px);
+        }
+
+        &__inner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            padding: 16px 8px;
+            background: rgba(21, 36, 72, 0.2);
+            backdrop-filter: blur(50px);
+        }
+
+        &__text {
+            font-family: "Lato";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            color: #f2f2f2;
+
+            @media all and (max-width: 420px) {
+                font-size: 16px;
+            }
+        }
+
+        &__img{
+            height: 294px;
+
+            @media all and (max-width: 768px) {
+                height: 268px;
+            }
+
+            @media all and (max-width: 420px) {
+                height: 163px;
+            }
+        }
+    }
+
+    &__list__mobile {
+        margin-left: 11%;
+        max-width: 100vw;
+        overflow: hidden;
+
+        @media all and (max-width: 768px) {
+            margin-left: 3%;
+        }
+
+        &__container {
+            overflow-x: auto;
+        }
+    }
+}

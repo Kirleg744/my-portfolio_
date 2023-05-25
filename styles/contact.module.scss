@@ -1,0 +1,196 @@
+.contact {
+    padding-top: 90px;
+    padding-bottom: 70px;
+
+    &__inner {
+        padding-top: 122px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 32px;
+    }
+
+    &__text {
+        margin: 0;
+        max-width: 555px;
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 128.9%;
+        color: #f2f2f2;
+        margin-bottom: 88px;
+    }
+
+    &__title {
+        position: relative;
+        &__text {
+            font-family: "Raleway";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 128.9%;
+            color: #ffffff;
+        }
+
+        &__border {
+            margin-top: 15px;
+            margin-bottom: 64px;
+            display: block;
+            height: 2px;
+            background: linear-gradient(
+                89.99deg,
+                #00d1ff 0%,
+                rgba(255, 34, 141, 0) 100%
+            );
+        }
+        &__arrow {
+            position: absolute;
+            top: 15px;
+            left: -22px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        &__label {
+            display: block;
+            margin-bottom: 34px;
+
+            &:last-child {
+                margin-bottom: 51px;
+            }
+
+            &__text {
+                font-family: "Lato";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 128.9%;
+                color: #f2f2f2;
+            }
+
+            &__input {
+                margin-top: 8px;
+                border: 2px solid rgba(255, 255, 255, 0.15);
+                border-radius: 4px;
+                background-color: transparent;
+                width: 100%;
+                height: 76px;
+                padding-left: 24px;
+                box-sizing: border-box;
+
+                &::placeholder {
+                    font-family: "Lato";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 22px;
+                    color: #b7bfd1;
+                }
+            }
+        }
+
+        &__btn {
+            background: radial-gradient(
+                142.65% 2282.99% at 100% -31.65%,
+                #00c9fc 0%,
+                #1a46ef 56.36%
+            );
+            border-radius: 4px;
+            width: 100%;
+            min-height: 57px;
+            margin: 0;
+            cursor: pointer;
+            font-family: "Raleway";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            color: #f2f2f2;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 43px;
+
+            &:hover {
+                background: radial-gradient(
+                    142.65% 2282.99% at 100% -31.65%,
+                    #08a6ce 0%,
+                    #6352b1 43.75%,
+                    #8b0eb7 68.75%
+                );
+            }
+
+            &:disabled {
+                cursor: auto;
+                opacity: 0.5;
+                background: radial-gradient(
+                    142.65% 2282.99% at 100% -31.65%,
+                    #00c9fc 0%,
+                    #1a46ef 56.36%
+                );
+            }
+        }
+        &__checkbox {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+
+            &__text {
+                user-select: none;
+                font-family: "Lato";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 128.9%;
+                color: #b7bfd1;
+            }
+
+            &__input {
+                position: absolute;
+                opacity: 0;
+            }
+
+            &__span {
+                margin-right: 12px;
+            }
+
+            &__input + &__span::before {
+                content: "";
+                display: inline-block;
+                margin-right: 5px;
+                border: 2px solid #0caed5;
+                border-radius: 4px;
+                width: 24px;
+                height: 24px;
+            }
+
+            &__input:checked + &__span::before {
+                background: url("/img/checkbox.png") no-repeat;
+                background-position: center center;
+                background-size: contain;
+                border-color: transparent;
+                animation: pop 180ms ease-in;
+            }
+
+            &__input:focus + &__span::before {
+                outline: 2px;
+            }
+
+            &__link {
+                color: #0caed4 !important;
+            }
+        }
+    }
+
+    @keyframes pop {
+        0% {
+            transform: scale(0);
+        }
+        90% {
+            transform: scale(1.4);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
