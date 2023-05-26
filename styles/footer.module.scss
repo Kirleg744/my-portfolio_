@@ -1,19 +1,154 @@
-.footer{
+.footer {
     padding-top: 68px;
-    &__border{
+    &__border {
         margin-bottom: 24px;
         display: block;
         height: 3px;
-        background: linear-gradient(89.99deg, #00D1FF 0%, rgba(255, 34, 141, 0) 100%);
+        background: linear-gradient(
+            89.99deg,
+            #00d1ff 0%,
+            rgba(255, 34, 141, 0) 100%
+        );
     }
 
-    &__inner{
+    &__inner {
         display: flex;
+
+        @media all and (max-width: 725px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media all and (max-width: 580px) {
+            align-items: start;
+        }
     }
 
-    &__left{
+    &__left {
         width: 17%;
+
+        @media all and (max-width: 1440px) {
+            width: 19%;
+        }
+
+        @media all and (max-width: 1090px) {
+            width: 12%;
+        }
+
+        @media all and (max-width: 765px) {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media all and (max-width: 580px) {
+            align-items: start;
+        }
     }
 
-    &
+    &__copyright {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 128.9%;
+        color: #b7bfd1;
+
+        @media all and (max-width: 1024px) {
+            font-size: 12px;
+        }
+    }
+
+    &__right {
+        @media all and (max-width: 1024px) {
+            padding-left: 20px;
+        }
+        @media all and (max-width: 580px) {
+            padding: 0;
+        }
+        &__top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 34px;
+
+            @media all and (max-width: 1440px) {
+                margin-bottom: 53px;
+            }
+
+            @media all and (max-width: 1090px) {
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+
+            &__text {
+                margin-right: 50px;
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 128.9%;
+                color: #f2f2f2;
+
+                @media all and (max-width: 1090px) {
+                    display: none;
+                }
+            }
+        }
+
+        &__bottom {
+            &__list {
+                padding: 0;
+                margin: 0;
+                column-count: 2;
+
+                @media all and (max-width: 768px) {
+                    column-count: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                @media all and (max-width: 580px) {
+                    display: block;
+                }
+
+                
+
+                &__item {
+                    &:not(:last-child) {
+                        margin-bottom: 19px;
+                    }
+
+                    &__link {
+                        font-family: "Montserrat";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 128.9%;
+                        color: #06caf9;
+
+                        @media all and (max-width: 725px) {
+                            display: block;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: auto;
+                        }
+
+                        @media all and (max-width: 500px) {
+                            max-width: 400px;
+                        }
+
+                        @media all and (max-width: 430px) {
+                            max-width: 300px;
+                        }
+
+                        @media all and (max-width: 320px) {
+                            max-width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,16 +1,19 @@
 import styles from "@/styles/footer.module.scss";
 import Logo from "../Logo/Logo";
 import SocialList from "./SocialList";
-import { Link } from "react-scroll";
+import Link from "next/link";
+import { useMediaQuery } from "@/hooks";
 
 const Footer = () => {
+    const isMobile725 = useMediaQuery(725);
     return (
         <footer className={styles.footer}>
             <div className={`container ${styles.footer__container}`}>
                 <span className={styles.footer__border} />
                 <div className={styles.footer__inner}>
                     <div className={styles.footer__left}>
-                        <Logo />
+                        {isMobile725 && <SocialList />}
+                        <Logo marginBottom={isMobile725 ? 15 : 44} />
                         <p className={styles.footer__copyright}>
                             © 2010-2021 <br /> «Иван»
                         </p>
@@ -20,7 +23,7 @@ const Footer = () => {
                             <p className={styles.footer__right__top__text}>
                                 Поделитесь сайтом с друзьями:
                             </p>
-                            <SocialList />
+                            {!isMobile725 && <SocialList />}
                         </div>
                         <div className={styles.footer__right__bottom}>
                             <ul className={styles.footer__right__bottom__list}>
@@ -29,7 +32,7 @@ const Footer = () => {
                                         styles.footer__right__bottom__list__item
                                     }
                                 >
-                                    <Link href="/cookie-policy">
+                                    <Link legacyBehavior href="/cookie-policy">
                                         <a
                                             className={
                                                 styles.footer__right__bottom__list__item__link
@@ -45,7 +48,7 @@ const Footer = () => {
                                         styles.footer__right__bottom__list__item
                                     }
                                 >
-                                    <Link href="/privacy-policy">
+                                    <Link legacyBehavior href="/privacy-policy">
                                         <a
                                             className={
                                                 styles.footer__right__bottom__list__item__link
@@ -60,7 +63,10 @@ const Footer = () => {
                                         styles.footer__right__bottom__list__item
                                     }
                                 >
-                                    <Link href="/personal-data-privacy">
+                                    <Link
+                                        legacyBehavior
+                                        href="/personal-data-privacy"
+                                    >
                                         <a
                                             className={
                                                 styles.footer__right__bottom__list__item__link
@@ -75,7 +81,7 @@ const Footer = () => {
                                         styles.footer__right__bottom__list__item
                                     }
                                 >
-                                    <Link href="/agreement">
+                                    <Link legacyBehavior href="/agreement">
                                         <a
                                             className={
                                                 styles.footer__right__bottom__list__item__link

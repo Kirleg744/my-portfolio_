@@ -9,18 +9,17 @@ import Portfolio from "@/components/Portfolio/Portfolio";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 
-
 export default function Home() {
     return (
         <>
-            <Header/>
+            <Header />
             <main>
-                <Hero/>
-                <About/>
-                <Skills/>
-                <Portfolio/>
-                <Contact/>
-                <Footer/>
+                <Hero />
+                <About />
+                <Skills />
+                <Portfolio />
+                <Contact />
+                <Footer />
             </main>
             <div className="background-animation">
                 <div id="ball-one"></div>
