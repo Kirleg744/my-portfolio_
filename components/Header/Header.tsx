@@ -42,8 +42,18 @@ const Header = () => {
                         <span></span>
                     </button>
                 )}
-                <nav className={`${isMobile ? stylesMenu.menu : styles.header__nav} ${menuOpen ? stylesMenu.open : ''}`}>
-                    <ul className={`${isMobile ? styles.list__reset : styles.header__nav__list}`}>
+                <nav
+                    className={`${
+                        isMobile ? stylesMenu.menu : styles.header__nav
+                    } ${menuOpen ? stylesMenu.open : ""}`}
+                >
+                    <ul
+                        className={`${
+                            isMobile
+                                ? styles.list__reset
+                                : styles.header__nav__list
+                        }`}
+                    >
                         <li className={currentMenuItemClass}>
                             <Link
                                 href="/"
@@ -54,7 +64,7 @@ const Header = () => {
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
                             >
-                                Обо мне
+                                Про мене
                             </Link>
                         </li>
                         <li className={currentMenuItemClass}>
@@ -67,7 +77,7 @@ const Header = () => {
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
                             >
-                                Навыки
+                                Навички
                             </Link>
                         </li>
                         <li className={currentMenuItemClass}>
@@ -80,7 +90,7 @@ const Header = () => {
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
                             >
-                                Портфолио
+                                Портфоліо
                             </Link>
                         </li>
                         <li className={currentMenuItemClass}>
@@ -93,7 +103,7 @@ const Header = () => {
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
                             >
-                                Связаться со мной
+                                Зв'язатися зі мною
                             </Link>
                         </li>
                     </ul>

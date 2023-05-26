@@ -5,27 +5,12 @@ const Skills = () => {
     return (
         <section className={styles.skills} id="skills">
             <div className="container">
-                <MainTitle text="Навыки" />
+                <MainTitle text="Навички" />
             </div>
             <div className="sub-container">
                 <ul className={styles.skills__list}>
                     <SkillsItem
-                        title="Разработка Frontend"
-                        text="HTML, CSS, SASS, Bootstrap, React.js, Next.js, Typescript, Redux"
-                        iconClass={styles.skills__frontend}
-                    />
-                    <SkillsItem
-                        title="Разработка Frontend"
-                        text="HTML, CSS, SASS, Bootstrap, React.js, Next.js, Typescript, Redux"
-                        iconClass={styles.skills__frontend}
-                    />
-                    <SkillsItem
-                        title="Разработка Frontend"
-                        text="HTML, CSS, SASS, Bootstrap, React.js, Next.js, Typescript, Redux"
-                        iconClass={styles.skills__frontend}
-                    />
-                    <SkillsItem
-                        title="Разработка Frontend"
+                        title="Розробка Frontend"
                         text="HTML, CSS, SASS, Bootstrap, React.js, Next.js, Typescript, Redux"
                         iconClass={styles.skills__frontend}
                     />

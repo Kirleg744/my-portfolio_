@@ -15,7 +15,7 @@ const Footer = () => {
                         {isMobile725 && <SocialList />}
                         <Logo marginBottom={isMobile725 ? 15 : 44} />
                         <p className={styles.footer__copyright}>
-                            © 2010-2021 <br /> «Иван»
+                            © 2022-2023 <br /> «Кирило»
                         </p>
                     </div>
                     <div className={styles.footer__right}>

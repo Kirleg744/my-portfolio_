@@ -9,15 +9,15 @@ const Contact = () => {
     return (
         <section className={styles.contact} id="contact">
             <div className="container">
-                <MainTitle text="Зв'язатися з розробником" />
+                <MainTitle text="Зв'язатися зі мною" />
             </div>
             <div className="sub-container">
                 <div className={styles.contact__inner}>
                     <div className={styles.contact__left}>
                         <p className={styles.contact__text}>
-                            Вы работаете над чем-то великим? Я с удовольствием
-                            помогу вам в этом! Напишите мне письмо и мы начнем
-                            проект прямо сейчас!
+                            Ви працюєте над чимось великим? Я із задоволенням
+                            допоможу вам у цьому! Напишіть мені листа і ми
+                            почнемо проект прямо зараз!
                         </p>
                         {!isMobile485 && (
                             <>

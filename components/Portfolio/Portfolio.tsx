@@ -59,7 +59,7 @@ const Portfolio = () => {
         },
         {
             id: 2,
-            title: "Вёрстка",
+            title: "Верстка",
             isActive: portfolioTab2,
             handler: handleShowPortfolioItems2,
         },

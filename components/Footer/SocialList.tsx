@@ -1,9 +1,12 @@
-import styles from "@/styles/socialListFooter.module.scss";
+import styles from "../../styles/socialListFooter.module.scss";
 const SocialList = () => {
     return (
         <ul className={styles.social__list}>
             <li className={styles.social__list__item}>
-                <a className={styles.social__list__item__link} href="#">
+                <a
+                    className={styles.social__list__item__link}
+                    href="https://www.facebook.com/profile.php?id=100004757239181"
+                >
                     <span className={styles.social__list__item__link__text}>
                         facebook
                     </span>
@@ -13,7 +16,10 @@ const SocialList = () => {
                 </a>
             </li>
             <li className={styles.social__list__item}>
-                <a className={styles.social__list__item__link} href="#">
+                <a
+                    className={styles.social__list__item__link}
+                    href="https://t.me/Kirleg"
+                >
                     <span className={styles.social__list__item__link__text}>
                         telegram
                     </span>
@@ -23,12 +29,15 @@ const SocialList = () => {
                 </a>
             </li>
             <li className={styles.social__list__item}>
-                <a className={styles.social__list__item__link} href="#">
+                <a
+                    className={styles.social__list__item__link}
+                    href="tel:0967836807"
+                >
                     <span className={styles.social__list__item__link__text}>
-                        YouTube
+                        0967836807
                     </span>
                     <span className={styles.social__list__item__link__icon}>
-                        <img src="/img/youtube.svg" alt="facebook" />
+                        <img src="/img/phone.svg" alt="facebook" />
                     </span>
                 </a>
             </li>
