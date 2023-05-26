@@ -69,7 +69,7 @@ export const Hero = () => {
                         duration={500}
                         className={styles.hero__btn}
                     >
-                        Зв'язатися з розробником
+                        Зв`язатися з розробником
                     </Link>
                     {!isMobile && (
                         <Link

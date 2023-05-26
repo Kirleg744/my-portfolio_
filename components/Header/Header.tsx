@@ -107,7 +107,7 @@ const Header = () => {
                                 className={styles.header__nav__list__item__link}
                                 onClick={closeMenu}
                             >
-                                Зв'язатися зі мною
+                                Зв`язатися зі мною
                             </Link>
                         </li>
                     </ul>
