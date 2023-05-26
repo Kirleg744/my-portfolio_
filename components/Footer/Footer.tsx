@@ -21,7 +21,7 @@ const Footer = () => {
                     <div className={styles.footer__right}>
                         <div className={styles.footer__right__top}>
                             <p className={styles.footer__right__top__text}>
-                                Поделитесь сайтом с друзьями:
+                                Поділіться сайтом з друзями
                             </p>
                             {!isMobile725 && <SocialList />}
                         </div>

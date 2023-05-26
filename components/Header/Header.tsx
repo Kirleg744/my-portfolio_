@@ -63,6 +63,7 @@ const Header = () => {
                                 offset={offset}
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
+                                onClick={closeMenu}
                             >
                                 Про мене
                             </Link>
@@ -70,12 +71,13 @@ const Header = () => {
                         <li className={currentMenuItemClass}>
                             <Link
                                 href="/"
-                                to="about"
+                                to="skills"
                                 spy={spy}
                                 smooth={smooth}
                                 offset={offset}
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
+                                onClick={closeMenu}
                             >
                                 Навички
                             </Link>
@@ -83,12 +85,13 @@ const Header = () => {
                         <li className={currentMenuItemClass}>
                             <Link
                                 href="/"
-                                to="about"
+                                to="portfolio"
                                 spy={spy}
                                 smooth={smooth}
                                 offset={offset}
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
+                                onClick={closeMenu}
                             >
                                 Портфоліо
                             </Link>
@@ -96,12 +99,13 @@ const Header = () => {
                         <li className={currentMenuItemClass}>
                             <Link
                                 href="/"
-                                to="about"
+                                to="contact"
                                 spy={spy}
                                 smooth={smooth}
                                 offset={offset}
                                 duration={duration}
                                 className={styles.header__nav__list__item__link}
+                                onClick={closeMenu}
                             >
                                 Зв'язатися зі мною
                             </Link>
