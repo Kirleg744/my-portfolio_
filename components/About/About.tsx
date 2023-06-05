@@ -9,7 +9,7 @@ const About = () => {
     return (
         <section className={styles.about} id="about">
             <div className="container">
-                <MainTitle text="Обо мне" />
+                <MainTitle text="Про мене" />
             </div>
             <div className={`sub-container ${styles.about__sub__container}`}>
                 <img
