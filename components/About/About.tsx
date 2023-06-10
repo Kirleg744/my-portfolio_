@@ -17,6 +17,11 @@ const About = () => {
                     alt=""
                     className={styles.about__img}
                 />
+                <img
+                    src="/img/barrey aleebasow.jpg"
+                    alt=""
+                    className={styles.about__img}
+                />
                 <div className={styles.about__inner}>
                     <h3 className={styles.about__title}>
                         Кирило Легкий
