@@ -53,7 +53,7 @@ const Portfolio = () => {
     const portfolioTabControls = [
         {
             id: 1,
-            title: "Всі проєкти",
+            title: "Всі проекти",
             isActive: portfolioTab1,
             handler: handleShowPortfolioItems1,
         },
