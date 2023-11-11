@@ -11,7 +11,7 @@ const Skills = () => {
                 <ul className={styles.skills__list}>
                     <SkillsItem
                         title="Розробка Frontend"
-                        text="HTML, CSS, SASS, Bootstrap, React.js, Next.js, Typescript, Redux"
+                        text="HTML, CSS, SASS, Bootstrap, React.js, Next.js, Typescript, Redux. Vue.js. Vuex"
                         iconClass={styles.skills__frontend}
                     />
                 </ul>
